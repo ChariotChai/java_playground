@@ -32,43 +32,57 @@ public class Lc306 {
             if (num.length() < 3) {
                 return false;
             }
-            return dfs(0, 0, num, 0);
+            return dfs("", "", num, 0);
         }
 
-        public boolean dfs(int pp, int p, String leftDigit, int currentIndex) {
-            int len = leftDigit.length();
-
-            if (currentIndex == 0) {
-                for (int i = 0; i <= len / 3; i++) {
-                    if (i < len - 1 && leftDigit.charAt(i + 1) == '0') {
-                        continue;
+        private boolean dfs(String pp, String p, String leftDigits, int currentIndex) {
+            int len = leftDigits.length();
+            for (int i = 0; i < len; i++) {
+                if (i > 0 && leftDigits.charAt(0) == '0') {
+                    return false;
+                }
+                if (currentIndex <= 1) {
+                    if (i > len / 2) {
+                        break;
                     }
-                    if (dfs(Integer.parseInt(leftDigit.substring(0, i + 1)), 0, leftDigit.substring(i + 1), currentIndex + 1)) {
+                    if (dfs(p, leftDigits.substring(0, i + 1), leftDigits.substring(i + 1), currentIndex + 1)) {
                         return true;
                     }
-                }
-            } else if (currentIndex == 1) {
-                for (int i = 0; i <= len / 3; i++) {
-                    if (i < len - 1 && leftDigit.charAt(i + 1) == '0') {
-                        continue;
-                    }
-                    if (dfs(pp, Integer.parseInt(leftDigit.substring(0, i + 1)), leftDigit.substring(i + 1), currentIndex + 1)) {
-                        return true;
-                    }
-                }
-            } else {
-                for (int i = 0; i < len; i++) {
-                    if (i < len - 1 && leftDigit.charAt(i + 1) == '0') {
-                        continue;
-                    }
-                    int curr = Integer.parseInt(leftDigit.substring(0, i + 1));
-                    if (curr == p + pp) {
-                        return i == len - 1 || dfs(p, curr, leftDigit.substring(i + 1), currentIndex + 1);
+                } else {
+                    String curr = leftDigits.substring(0, i + 1);
+                    if (numStringAddCmp(pp, p, curr)) {
+                        return i == len - 1 || dfs(p, curr, leftDigits.substring(i + 1), currentIndex + 1);
                     }
                 }
             }
-
             return false;
+        }
+
+        private boolean numStringAddCmp(String x, String y, String expect) {
+            int xlen = x.length();
+            int ylen = y.length();
+            int elen = expect.length();
+
+            int maxLen = Math.max(xlen, ylen);
+            if (maxLen != elen && maxLen != elen - 1) {
+                return false;
+            }
+
+            int i = 0;
+            int carry = 0;
+            while (i < elen) {
+                if (i >= xlen && i >= ylen) {
+                    break;
+                }
+                int sum = (i < xlen ? x.charAt(xlen - i - 1) - '0' : 0) + (i < ylen ? y.charAt(ylen - i - 1) - '0' : 0) + carry;
+                if (sum % 10 != expect.charAt(elen - i - 1) - '0') {
+                    return false;
+                }
+                carry = sum / 10;
+                i++;
+            }
+
+            return i == elen || i == elen - 1 && carry == 1 && expect.charAt(0) == '1';
         }
 
     }
@@ -77,6 +91,11 @@ public class Lc306 {
         System.out.println(new Lc306().new Solution().isAdditiveNumber("112358"));
         System.out.println(new Lc306().new Solution().isAdditiveNumber("199100199"));
         System.out.println(new Lc306().new Solution().isAdditiveNumber("111"));
+        System.out.println(new Lc306().new Solution().isAdditiveNumber("1001"));
+        System.out.println(new Lc306().new Solution().isAdditiveNumber("9910011992"));
+        System.out.println(new Lc306().new Solution().isAdditiveNumber("198019823962"));
+        System.out.println(new Lc306().new Solution().isAdditiveNumber("199001200"));
+        System.out.println(new Lc306().new Solution().isAdditiveNumber("123"));
     }
 
 }
