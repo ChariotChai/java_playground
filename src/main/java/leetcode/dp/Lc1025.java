@@ -47,10 +47,36 @@ public class Lc1025 {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public boolean divisorGame(int N) {
-            return false;
+            if (N <= 1) {
+                return false;
+            }
+            boolean[] dp = new boolean[N + 1];
+            dp[2] = true;
+
+            for (int i = 3; i <= N; i++) {
+                for (int j = 1; j < i; j++) {
+                    if (i % j == 0 && !dp[i - j]) {
+                        dp[i] = true;
+                        break;
+                    }
+                    if (i < j * 2) {
+                        break;
+                    }
+                }
+            }
+
+            return dp[N];
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
+
+    public static void main(String[] args) {
+        System.out.println(new Lc1025().new Solution().divisorGame(1));
+        System.out.println(new Lc1025().new Solution().divisorGame(2));
+        System.out.println(new Lc1025().new Solution().divisorGame(3));
+        System.out.println(new Lc1025().new Solution().divisorGame(4));
+        System.out.println(new Lc1025().new Solution().divisorGame(5));
+    }
 
 
 }
