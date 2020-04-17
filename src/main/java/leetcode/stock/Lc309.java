@@ -22,10 +22,26 @@ public class Lc309 {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public int maxProfit(int[] prices) {
-            return -1;
+            if (prices.length == 0) {
+                return 0;
+            }
+            int a = -prices[0];
+            int b = 0, c = 0;
+
+            for (int i = 1; i < prices.length; i++) {
+                int tmpA = a;
+                a = Math.max(a, b - prices[i]);
+                b = Math.max(b, c);
+                c = tmpA + prices[i];
+            }
+
+            return Math.max(b, c);
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
 
+    public static void main(String[] args) {
+        System.out.println(new Lc309().new Solution().maxProfit(new int[]{1, 2, 3, 0, 2}));
+    }
 
 }
