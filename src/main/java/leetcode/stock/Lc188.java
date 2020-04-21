@@ -1,7 +1,5 @@
 package leetcode.stock;
 
-import com.alibaba.fastjson.JSON;
-
 public class Lc188 {
 
     //给定一个数组，它的第 i 个元素是一支给定的股票在第 i 天的价格。
@@ -35,48 +33,46 @@ public class Lc188 {
                 return 0;
             }
 
-            k = Math.min(k, prices.length / 2);
-
-            int[][] a = new int[k + 1][];
-            int[][] b = new int[k + 1][];
-            a[0] = new int[prices.length];
-            b[0] = new int[prices.length];
-
-            for (int t = 1; t <= k; t++) {
-                a[t] = new int[prices.length];
-                b[t] = new int[prices.length];
-                a[t][0] = -prices[0];
+            if (k >= prices.length / 2) {
+                int sum = 0;
                 for (int i = 1; i < prices.length; i++) {
-                    a[t][i] = Math.max(a[t][i - 1], b[t - 1][i - 1] - prices[i]);
-                    b[t][i] = Math.max(a[t][i - 1] + prices[i], b[t][i - 1]);
-                }
-            }
-            System.out.println(JSON.toJSONString(b));
-
-            int x = 0;
-            int[] y = new int[prices.length];
-            for (int t = 1; t <= k; t++) {
-                x = -prices[0];
-                int tmpY = y[0];
-                for (int i = 1; i < prices.length; i++) {
-                    int tmpX = x;
-                    x = Math.max(tmpX, tmpY - prices[i]);
-                    if (i > 1) {
-                        tmpY = y[i - 2];
+                    int diff = prices[i] - prices[i-1];
+                    if (diff > 0) {
+                        sum += diff;
                     }
-                    y[i] = Math.max(tmpX + prices[i], y[i]);
-                    System.out.println("~~ " + tmpY + " ~~ t = " + t + " ~~ i = " + i);
                 }
-                System.out.println("~~" + JSON.toJSONString(y));
+                return sum;
             }
-            return b[k][prices.length - 1];
+
+            int[] x = new int[prices.length];
+            int[] y = new int[prices.length];
+            x[0] = -prices[0];
+            int lasty;
+            int tmpx;
+            int last = 0;
+            for (int t = 1; t <= k; t++) {
+                lasty = y[0];
+                int size = Math.max(1, prices.length - k + t);
+                for (int i = 1; i < size; i++) {
+                    tmpx = x[i - 1];
+                    x[i] = Math.max(tmpx, lasty - prices[i]);
+                    lasty = y[i];
+                    y[i] = Math.max(y[i - 1], tmpx + prices[i]);
+                }
+                if (size == prices.length && last >= y[prices.length - 1]) {
+                    break;
+                }
+                last = y[prices.length - 1];
+            }
+
+            return last;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
 
     public static void main(String[] args) {
         System.out.println(new Lc188().new Solution().maxProfit(2, new int[]{2, 4, 1}));
-        System.out.println(new Lc188().new Solution().maxProfit(2, new int[]{3, 2, 6, 5, 0, 3}));
+        System.out.println(new Lc188().new Solution().maxProfit(10, new int[]{3, 2, 6, 5, 0, 3}));
     }
 
 }
