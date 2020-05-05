@@ -25,43 +25,31 @@ public class Lc34 {
         public int[] searchRange(int[] nums, int target) {
             int[] ans = new int[]{-1, -1};
 
-            int lo = 0, hi = nums.length - 1;
+            int lo = 0, hi = nums.length;
             int mi, val;
-            while (lo <= hi) {
+            while (lo < hi) {
                 mi = (lo + hi) / 2;
                 val = nums[mi];
-                if (val < target) {
-                    lo = mi;
-                } else if (val > target) {
+                if (val >= target) {
                     hi = mi;
                 } else {
-                    if (nums[mi - 1] < target) {
-                        ans[0] = mi;
-                        break;
-                    } else {
-                        hi = mi;
-                    }
+                    lo = mi + 1;
                 }
             }
+            ans[0] = lo == nums.length || nums[lo] != target ? -1 : lo;
 
             lo = 0;
-            hi = nums.length - 1;
-            while (lo <= hi) {
+            hi = nums.length;
+            while (lo < hi) {
                 mi = (lo + hi) / 2;
                 val = nums[mi];
-                if (val < target) {
-                    lo = mi;
-                } else if (val > target) {
-                    hi = mi;
+                if (val <= target) {
+                    lo = mi + 1;
                 } else {
-                    if (nums[mi + 1] > target) {
-                        ans[1] = mi;
-                        break;
-                    } else {
-                        lo = mi;
-                    }
+                    hi = mi;
                 }
             }
+            ans[1] = lo == 0 || nums[lo - 1] != target ? -1 : lo - 1;
 
             return ans;
         }
