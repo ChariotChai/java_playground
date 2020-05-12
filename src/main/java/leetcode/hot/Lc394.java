@@ -1,9 +1,9 @@
 package leetcode.hot;
 
-import java.util.Stack;
+import java.util.Deque;
+import java.util.LinkedList;
 
 public class Lc394 {
-
     //给定一个经过编码的字符串，返回它解码后的字符串。
 //
 // 编码规则为: k[encoded_string]，表示其中方括号内部的 encoded_string 正好重复 k 次。注意 k 保证为正整数。
@@ -25,43 +25,30 @@ public class Lc394 {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public String decodeString(String s) {
-            Stack<Character> stack = new Stack<>();
+
+            Deque<String> deqStr = new LinkedList<>();
+            Deque<Integer> deqInt = new LinkedList<>();
+            int cnt = 0;
+            int mode = 0; // 0 数字状态；1 字母状态；2 临界状态
             StringBuilder sb = new StringBuilder();
+            for (char c : s.toCharArray()) {
+                if (0 <= c - '0' && c - '9' <= 0) {
 
-            char[] cs = s.toCharArray();
-            for (char c : cs) {
-                if (c != ']') {
-                    stack.push(c);
-                    continue;
-                }
-                if (stack.isEmpty()) {
-                    sb.append(c);
-                    continue;
                 }
 
-                int repeat = 0;
-                int digitCnt = 1;
-                boolean flag = true;
-                StringBuilder sbContent = new StringBuilder();
-                while (flag) {
-
-
-
-                    char cc = stack.pop();
-                    if (cc >= 'a' && cc <= 'z') {
-                        sbContent.append(cc);
-                    } else if (cc >= '0' && cc <= '9') {
-                        repeat += (cc - '0') * digitCnt;
-                        digitCnt *= 10;
-                    }
+                if (mode == 0) {
+                    cnt = cnt * 10 + c - '0';
                 }
-                String ss = sbContent.reverse().toString();
-                for (int i = 0; i < repeat; i++) {
-                    sb.append(ss);
+
+                if (c == ']') {
+
+                } else {
+
                 }
+
             }
 
-            return sb.toString();
+            return null;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
