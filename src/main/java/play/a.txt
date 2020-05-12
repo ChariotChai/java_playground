@@ -1,0 +1,217 @@
+INSERT INTO `measure_quantity_config` (`measure_quantity_id`, `measure`, `quantity`, `type`, `operator`, `description`)
+VALUES
+(1301, 101, '{\"range\":[1,1]}', 1, 'qiluanqi', '暂停部分服务资格1天'),
+(1302, 101, '{\"range\":[2,2]}', 1, 'qiluanqi', '暂停部分服务资格2天'),
+(1303, 101, '{\"range\":[3,3]}', 1, 'qiluanqi', '暂停部分服务资格3天'),
+(1304, 101, '{\"range\":[4,4]}', 1, 'qiluanqi', '暂停部分服务资格4天'),
+(1305, 101, '{\"range\":[5,5]}', 1, 'qiluanqi', '暂停部分服务资格5天'),
+(1306, 101, '{\"range\":[6,6]}', 1, 'qiluanqi', '暂停部分服务资格6天'),
+(1307, 101, '{\"range\":[7,7]}', 1, 'qiluanqi', '暂停部分服务资格7天'),
+(1308, 101, '{\"range\":[8,8]}', 1, 'qiluanqi', '暂停部分服务资格8天'),
+(1309, 101, '{\"range\":[9,9]}', 1, 'qiluanqi', '暂停部分服务资格9天'),
+(1310, 101, '{\"range\":[10,10]}', 1, 'qiluanqi', '暂停部分服务资格10天'),
+(1311, 101, '{\"range\":[11,11]}', 1, 'qiluanqi', '暂停部分服务资格11天'),
+(1312, 101, '{\"range\":[12,12]}', 1, 'qiluanqi', '暂停部分服务资格12天'),
+(1313, 101, '{\"range\":[13,13]}', 1, 'qiluanqi', '暂停部分服务资格13天'),
+(1314, 101, '{\"range\":[14,14]}', 1, 'qiluanqi', '暂停部分服务资格14天'),
+(1315, 101, '{\"range\":[15,15]}', 1, 'qiluanqi', '暂停部分服务资格15天'),
+(1316, 101, '{\"range\":[16,16]}', 1, 'qiluanqi', '暂停部分服务资格16天'),
+(1317, 101, '{\"range\":[17,17]}', 1, 'qiluanqi', '暂停部分服务资格17天'),
+(1318, 101, '{\"range\":[18,18]}', 1, 'qiluanqi', '暂停部分服务资格18天'),
+(1319, 101, '{\"range\":[19,19]}', 1, 'qiluanqi', '暂停部分服务资格19天'),
+(1320, 101, '{\"range\":[20,20]}', 1, 'qiluanqi', '暂停部分服务资格20天'),
+(1321, 101, '{\"range\":[21,21]}', 1, 'qiluanqi', '暂停部分服务资格21天'),
+(1322, 101, '{\"range\":[22,22]}', 1, 'qiluanqi', '暂停部分服务资格22天'),
+(1323, 101, '{\"range\":[23,23]}', 1, 'qiluanqi', '暂停部分服务资格23天'),
+(1324, 101, '{\"range\":[24,24]}', 1, 'qiluanqi', '暂停部分服务资格24天'),
+(1325, 101, '{\"range\":[25,25]}', 1, 'qiluanqi', '暂停部分服务资格25天'),
+(1326, 101, '{\"range\":[26,26]}', 1, 'qiluanqi', '暂停部分服务资格26天'),
+(1327, 101, '{\"range\":[27,27]}', 1, 'qiluanqi', '暂停部分服务资格27天'),
+(1328, 101, '{\"range\":[28,28]}', 1, 'qiluanqi', '暂停部分服务资格28天'),
+(1329, 101, '{\"range\":[29,29]}', 1, 'qiluanqi', '暂停部分服务资格29天'),
+(1330, 101, '{\"range\":[30,30]}', 1, 'qiluanqi', '暂停部分服务资格30天'),
+(1331, 101, '{}', 1, 'qiluanqi', '永久暂停部分服务资格'),
+(1332, 101, '{}', 1, 'qiluanqi', '暂停部分服务资格至满足条件为止'),
+(1333, 101,  '{\"range\":[90,90]}', 1, 'qiluanqi', '暂停部分服务资格90天'),
+(1334, 101, '{\"range\":[15,28]}', 1, 'qiluanqi', '暂停部分服务资格15-28天'),
+(1335, 101, '{}', 1, 'qiluanqi', '暂停其现金付、扫码付订单服务'),
+
+(1401, 102, '{\"range\":[1,1]}', 1, 'qiluanqi', '暂停全部服务资格1天'),
+(1402, 102, '{\"range\":[2,2]}', 1, 'qiluanqi', '暂停全部服务资格2天'),
+(1403, 102, '{\"range\":[3,3]}', 1, 'qiluanqi', '暂停全部服务资格3天'),
+(1404, 102, '{\"range\":[4,4]}', 1, 'qiluanqi', '暂停全部服务资格4天'),
+(1405, 102, '{\"range\":[5,5]}', 1, 'qiluanqi', '暂停全部服务资格5天'),
+(1406, 102, '{\"range\":[6,6]}', 1, 'qiluanqi', '暂停全部服务资格6天'),
+(1407, 102, '{\"range\":[7,7]}', 1, 'qiluanqi', '暂停全部服务资格7天'),
+(1408, 102, '{\"range\":[8,8]}', 1, 'qiluanqi', '暂停全部服务资格8天'),
+(1409, 102, '{\"range\":[9,9]}', 1, 'qiluanqi', '暂停全部服务资格9天'),
+(1410, 102, '{\"range\":[10,10]}', 1, 'qiluanqi', '暂停全部服务资格10天'),
+(1411, 102, '{\"range\":[11,11]}', 1, 'qiluanqi', '暂停全部服务资格11天'),
+(1412, 102, '{\"range\":[12,12]}', 1, 'qiluanqi', '暂停全部服务资格12天'),
+(1413, 102, '{\"range\":[13,13]}', 1, 'qiluanqi', '暂停全部服务资格13天'),
+(1414, 102, '{\"range\":[14,14]}', 1, 'qiluanqi', '暂停全部服务资格14天'),
+(1415, 102, '{\"range\":[15,15]}', 1, 'qiluanqi', '暂停全部服务资格15天'),
+(1416, 102, '{\"range\":[16,16]}', 1, 'qiluanqi', '暂停全部服务资格16天'),
+(1417, 102, '{\"range\":[17,17]}', 1, 'qiluanqi', '暂停全部服务资格17天'),
+(1418, 102, '{\"range\":[18,18]}', 1, 'qiluanqi', '暂停全部服务资格18天'),
+(1419, 102, '{\"range\":[19,19]}', 1, 'qiluanqi', '暂停全部服务资格19天'),
+(1420, 102, '{\"range\":[20,20]}', 1, 'qiluanqi', '暂停全部服务资格20天'),
+(1421, 102, '{\"range\":[21,21]}', 1, 'qiluanqi', '暂停全部服务资格21天'),
+(1422, 102, '{\"range\":[22,22]}', 1, 'qiluanqi', '暂停全部服务资格22天'),
+(1423, 102, '{\"range\":[23,23]}', 1, 'qiluanqi', '暂停全部服务资格23天'),
+(1424, 102, '{\"range\":[24,24]}', 1, 'qiluanqi', '暂停全部服务资格24天'),
+(1425, 102, '{\"range\":[25,25]}', 1, 'qiluanqi', '暂停全部服务资格25天'),
+(1426, 102, '{\"range\":[26,26]}', 1, 'qiluanqi', '暂停全部服务资格26天'),
+(1427, 102, '{\"range\":[27,27]}', 1, 'qiluanqi', '暂停全部服务资格27天'),
+(1428, 102, '{\"range\":[28,28]}', 1, 'qiluanqi', '暂停全部服务资格28天'),
+(1429, 102, '{\"range\":[29,29]}', 1, 'qiluanqi', '暂停全部服务资格29天'),
+(1430, 102, '{\"range\":[30,30]}', 1, 'qiluanqi', '暂停全部服务资格30天'),
+(1431, 102, '{}', 1, 'qiluanqi', '永久暂停全部服务资格'),
+(1432, 102, '{}', 1, 'qiluanqi', '暂停全部服务资格至满足条件为止'),
+(1433, 102, '{\"range\":[90,90]}', 1, 'qiluanqi', '暂停全部服务资格90天'),
+(1434, 102, '', 1, 'qiluanqi', '暂停全部服务资格20分钟'),
+(1435, 102, '', 1, 'qiluanqi', '暂停全部服务资格6小时'),
+
+(1219, 15, '{\"level\":1,\"days\":21}', 0, 'qiluanqi', '静默21天'),
+(1221, 15, '{\"level\":1,\"days\":22}', 0, 'qiluanqi', '静默22天'),
+(1223, 15, '{\"level\":1,\"days\":28}', 0, 'qiluanqi', '静默28天'),
+
+
+(1207, 1101, '', 0, 'qiluanqi', '安全培训'),
+
+(1209, 1102, '', 0, 'qiluanqi', '教育培训'),
+
+(1205, 1103, '', 0, 'qiluanqi', '降级'),
+
+(1211, 1104, '', 0, 'qiluanqi', '不予垫付'),
+
+(1215, 1105, '', 0, 'qiluanqi', '扣行为分'),
+(1213, 1106, '', 0, 'qiluanqi', '扣除取消费'),
+(1217, 1107, '', 0, 'qiluanqi', '扣减取消次数'),
+
+
+
+;
+
+
+
+
+INSERT INTO `measure` (`measure_id`, `name`, `type`)
+VALUES
+	(1101, '安全培训', 0),
+	(1102, '教育培训', 0),
+	(1103, '降级', 0),
+	(1104, '不予垫付', 0),
+	(1105, '扣行为分', 0),
+	(1106, '扣除取消费', 0),
+	(1107, '扣减取消次数', 0),
+
+	;
+
+~~~~~~~~~~~~ exist rule 20051 cat_id = 114
+~~~~~~~~~~~~ exist rule 20100 cat_id = 130
+~~~~~~~~~~~~ exist rule 20096 cat_id = 130
+~~~~~~~~~~~~ exist rule 20101 cat_id = 0
+~~~~~~~~~~~~ exist rule 20108 cat_id = 0
+~~~~~~~~~~~~ exist rule 20102 cat_id = 0
+~~~~~~~~~~~~ exist rule 20074 cat_id = 0
+~~~~~~~~~~~~ exist rule 20105 cat_id = 0
+~~~~~~~~~~~~ exist rule 20099 cat_id = 0
+~~~~~~~~~~~~ exist rule 20109 cat_id = 0
+~~~~~~~~~~~~ exist rule 20103 cat_id = 0
+~~~~~~~~~~~~ exist rule 20063 cat_id = 136
+~~~~~~~~~~~~ exist rule 20064 cat_id = 136
+~~~~~~~~~~~~ exist rule 20065 cat_id = 136
+~~~~~~~~~~~~ exist rule 20061 cat_id = 136
+~~~~~~~~~~~~ exist rule 20081 cat_id = 148
+~~~~~~~~~~~~ exist rule 20086 cat_id = 148
+~~~~~~~~~~~~ exist rule 20090 cat_id = 148
+~~~~~~~~~~~~ exist rule 20091 cat_id = 148
+~~~~~~~~~~~~ exist rule 20092 cat_id = 148
+~~~~~~~~~~~~ exist rule 20093 cat_id = 148
+~~~~~~~~~~~~ exist rule 20071 cat_id = 157
+~~~~~~~~~~~~ exist rule 20072 cat_id = 157
+~~~~~~~~~~~~ exist rule 20073 cat_id = 157
+~~~~~~~~~~~~ exist rule 20098 cat_id = 157
+~~~~~~~~~~~~ exist rule 20104 cat_id = 157
+~~~~~~~~~~~~ exist rule 20110 cat_id = 136
+~~~~~~~~~~~~ exist rule 20097 cat_id = 157
+~~~~~~~~~~~~ exist rule 20107 cat_id = 148
+~~~~~~~~~~~~ exist rule 20041 cat_id = 136
+~~~~~~~~~~~~ exist rule 20042 cat_id = 136
+~~~~~~~~~~~~ exist rule 20043 cat_id = 136
+
+UPDATE v21_rule SET `category_id` = 114 WHERE `rule_id` =20051;
+UPDATE v21_rule SET `category_id` = 130 WHERE `rule_id` =20100;
+UPDATE v21_rule SET `category_id` = 130 WHERE `rule_id` =20096;
+UPDATE v21_rule SET `category_id` = 130 WHERE `rule_id` =20101;
+UPDATE v21_rule SET `category_id` = 130 WHERE `rule_id` =20108;
+UPDATE v21_rule SET `category_id` = 130 WHERE `rule_id` =20102;
+UPDATE v21_rule SET `category_id` = 130 WHERE `rule_id` =20074;
+UPDATE v21_rule SET `category_id` = 130 WHERE `rule_id` =20105;
+UPDATE v21_rule SET `category_id` = 130 WHERE `rule_id` =20099;
+UPDATE v21_rule SET `category_id` = 130 WHERE `rule_id` =20109;
+UPDATE v21_rule SET `category_id` = 130 WHERE `rule_id` =20103;
+UPDATE v21_rule SET `category_id` = 136 WHERE `rule_id` =20063;
+UPDATE v21_rule SET `category_id` = 136 WHERE `rule_id` =20064;
+UPDATE v21_rule SET `category_id` = 136 WHERE `rule_id` =20065;
+UPDATE v21_rule SET `category_id` = 136 WHERE `rule_id` =20061;
+UPDATE v21_rule SET `category_id` = 148 WHERE `rule_id` =20081;
+UPDATE v21_rule SET `category_id` = 148 WHERE `rule_id` =20086;
+UPDATE v21_rule SET `category_id` = 148 WHERE `rule_id` =20090;
+UPDATE v21_rule SET `category_id` = 148 WHERE `rule_id` =20091;
+UPDATE v21_rule SET `category_id` = 148 WHERE `rule_id` =20092;
+UPDATE v21_rule SET `category_id` = 148 WHERE `rule_id` =20093;
+UPDATE v21_rule SET `category_id` = 157 WHERE `rule_id` =20071;
+UPDATE v21_rule SET `category_id` = 157 WHERE `rule_id` =20072;
+UPDATE v21_rule SET `category_id` = 157 WHERE `rule_id` =20073;
+UPDATE v21_rule SET `category_id` = 157 WHERE `rule_id` =20098;
+UPDATE v21_rule SET `category_id` = 157 WHERE `rule_id` =20104;
+UPDATE v21_rule SET `category_id` = 136 WHERE `rule_id` =20110;
+UPDATE v21_rule SET `category_id` = 157 WHERE `rule_id` =20097;
+UPDATE v21_rule SET `category_id` = 148 WHERE `rule_id` =20107;
+UPDATE v21_rule SET `category_id` = 136 WHERE `rule_id` =20041;
+UPDATE v21_rule SET `category_id` = 136 WHERE `rule_id` =20042;
+UPDATE v21_rule SET `category_id` = 136 WHERE `rule_id` =20043;
+
+
+200527,200436,200437,200529,200438,200439,200440,200431,200432,200433,200525,200434,200901,200341,200435,
+
+20127
+200341 201271
+1: "[{"scene_desc":"优享神访不合格1次","measure":4,"quantity":797,"duty":1,"motive":2,"Tag":{"role":[1],"biz_type":null,"biz_id":[260],"city_id":[19],"order_type":0,"fence":[0],"driving_area":0,"accept_order_mode":0}},{"scene_desc":"优享神访不合格2次","measure":4,"quantity":801,"duty":1,"motive":2,"Tag":{"role":[1],"biz_type":null,"biz_id":[260],"city_id":[19],"order_type":0,"fence":[0],"driving_area":0,"accept_order_mode":0}}]"
+
+update v21_rule_item set `item_id` = 201271 where id = 200341;
+update v21_rule_item set `item_id` = 201571 where id = 200525;
+update v21_rule_item set `item_id` = 201572 where id = 200527;
+update v21_rule_item set `item_id` = 201573 where id = 200529;
+update v21_rule_item set `item_id` = 202911 where id = 200901;
+
+
+update v21_atom_rule set `item_id` = 201271 where id = 2000341;
+update v21_atom_rule set `item_id` = 201571 where id = 2000525;
+update v21_atom_rule set `item_id` = 201572 where id = 2000527;
+update v21_atom_rule set `item_id` = 201573 where id = 2000529;
+update v21_atom_rule set `item_id` = 202911 where id = 2000901;
+
+
+update v21_rule_tag set `item_id` = 201271 where id = 1049;
+update v21_rule_tag set `item_id` = 201571 where id = 4877;
+update v21_rule_tag set `item_id` = 200527 where id = 4879;
+update v21_rule_tag set `item_id` = 200529 where id = 4881;
+update v21_rule_tag set `item_id` = 202911 where id in (6719, 6721, 6723, 6725, 6727, 6729);
+
+update v21_category set `category_id` = `category_id` + 1000;
+update v21_category set `parent_id` = `parent_id` + 1000 where parent_id > 0;
+
+20157
+200525 201571
+200527 201572
+200529 201573
+
+20291
+200901 202911
+
+201271,201571,201572,201573,202911
+
+200341,200525,200527,200529,200901
