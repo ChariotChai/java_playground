@@ -17,9 +17,42 @@ public class Lc31 {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public void nextPermutation(int[] nums) {
+            //找到最后一段降序序列，n[i-1] < n[i] > ...
+            int split = nums.length - 1;
+            while (split > 0 && nums[split] <= nums[split - 1]) {
+                split--;
+            }
+            System.out.println("split = " + split);
 
+            if (split > 0) {
+                //找到[i,n)之内比n[i-1]大的最小的数，然后交换[i-1]和[k]，交换后[i,n)仍然是降序的
+                int minGtIdx = nums.length - 1;
+                while (nums[minGtIdx] <= nums[split - 1]) {
+                    minGtIdx--;
+                }
+                System.out.println("minGtIdx = " + minGtIdx);
+                swap(nums, split - 1, minGtIdx);
+            }
+
+            //对[i,n)升序排列，仅翻转即可
+            for (int i = split, j = nums.length - 1; i < j; i++, j--) {
+                swap(nums, i, j);
+            }
+        }
+
+        private void swap(int[] arr, int from, int to) {
+            if (from == to) {
+                return;
+            }
+            int tmp = arr[from];
+            arr[from] = arr[to];
+            arr[to] = tmp;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
+
+    public static void main(String[] args) {
+        new Lc31().new Solution().nextPermutation(new int[]{5, 4, 7, 5, 3, 2});
+    }
 
 }
