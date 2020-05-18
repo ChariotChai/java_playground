@@ -19,6 +19,26 @@ public class Lc85 {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public int maximalRectangle(char[][] matrix) {
+
+            int[][] d = new int[matrix.length][matrix[0].length];
+            int[] area = new int[matrix[0].length];
+            for (int i = 0; i < matrix.length; i++) {
+                for (int j = 0; j < matrix[0].length; j++) {
+                    d[i][j] = matrix[i][j] == '0' ? 0 : j == 0 ? 1 : d[i][j - 1] + 1;
+                    int minWidth = d[i][j];
+                    int maxArea = minWidth;
+                    for (int k = i - 1; k >= 0; k--) {
+                        minWidth = Math.min(minWidth, d[k][j]);
+                        maxArea = Math.max(maxArea, minWidth * (i - k));
+                    }
+                    area[j] = maxArea;
+                }
+            }
+
+            for (int i = 0; i < matrix.length; i++) {
+
+            }
+
             return -1;
         }
     }
