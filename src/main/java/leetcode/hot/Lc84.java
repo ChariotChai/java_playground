@@ -61,7 +61,7 @@ public class Lc84 {
 
             for (int i = 0; i <= heights.length; i++) {
 
-                int currHeight = i < heights.length ? heights[i] : 0;
+                int currHeight = i < heights.length ? heights[i] : -1;
 
                 //当前元素小于栈顶元素，则当前元素为栈顶元素之后的右边界
                 //而栈中在栈顶之下的元素，为栈顶元素的左边界
